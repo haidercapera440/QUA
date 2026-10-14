@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://b5o71fmg4nihw"]
+
+[ext_resource type="Texture2D" uid="uid://chgx7owxqdand" path="res://Sprite/AnimSprite/Azul.png" id="1_axrd5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_axrd5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vg10"]
+size = Vector2(70, 69)
+
+[node name="EquipoAzul" type="Node2D" unique_id=2114332147]
+
+[node name="fichaAzulArea" type="Area2D" parent="." unique_id=1898192580 groups=["Fichas"]]
+position = Vector2(29, 573)
+scale = Vector2(0.3, 0.3)
+
+[node name="AzulButton1" type="Button" parent="fichaAzulArea" unique_id=50809359]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_axrd5")
+icon = ExtResource("1_axrd5")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaAzulArea" unique_id=1193820039]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")
+
+[node name="fichaAzulArea2" type="Area2D" parent="." unique_id=1310518842 groups=["Fichas"]]
+position = Vector2(121, 573)
+scale = Vector2(0.3, 0.3)
+
+[node name="AzulButton2" type="Button" parent="fichaAzulArea2" unique_id=1678137275]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_axrd5")
+icon = ExtResource("1_axrd5")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaAzulArea2" unique_id=470298760]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")
+
+[node name="fichaAzulArea3" type="Area2D" parent="." unique_id=1813671060 groups=["Fichas"]]
+position = Vector2(218, 574)
+scale = Vector2(0.3, 0.3)
+
+[node name="AzulButton3" type="Button" parent="fichaAzulArea3" unique_id=908995900]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_axrd5")
+icon = ExtResource("1_axrd5")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaAzulArea3" unique_id=312801908]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")
+
+[node name="fichaAzulArea4" type="Area2D" parent="." unique_id=257416020 groups=["Fichas"]]
+position = Vector2(311, 573)
+scale = Vector2(0.3, 0.3)
+
+[node name="AzulButton4" type="Button" parent="fichaAzulArea4" unique_id=549107519]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_axrd5")
+icon = ExtResource("1_axrd5")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaAzulArea4" unique_id=1941966701]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")
+
+[node name="fichaAzulArea5" type="Area2D" parent="." unique_id=57746305 groups=["Fichas"]]
+position = Vector2(402, 574)
+scale = Vector2(0.3, 0.3)
+
+[node name="AzulButton5" type="Button" parent="fichaAzulArea5" unique_id=548397820]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_axrd5")
+icon = ExtResource("1_axrd5")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaAzulArea5" unique_id=1021795968]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")

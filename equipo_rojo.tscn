@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://cpn0ti2yu8lvb"]
+
+[ext_resource type="Texture2D" uid="uid://c7da8mtrr1ed6" path="res://Sprite/AnimSprite/Rojo.png" id="1_srjt1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srjt1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vg10"]
+size = Vector2(70, 69)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w680n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="EquipoRojo" type="Node2D" unique_id=630734687]
+
+[node name="fichaRojaArea" type="Area2D" parent="." unique_id=1932904623 groups=["Fichas"]]
+position = Vector2(1063, 20)
+scale = Vector2(0.3, 0.3)
+
+[node name="RojoButton1" type="Button" parent="fichaRojaArea" unique_id=1713758941]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_srjt1")
+icon = ExtResource("1_srjt1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaRojaArea" unique_id=2099950066]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")
+debug_color = Color(0.74633473, 0, 0.27291563, 0.41960785)
+
+[node name="fichaRojaArea2" type="Area2D" parent="." unique_id=2034776930 groups=["Fichas"]]
+position = Vector2(1063, 106)
+scale = Vector2(0.3, 0.3)
+
+[node name="RojoButton2" type="Button" parent="fichaRojaArea2" unique_id=1988309505]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_w680n")
+icon = ExtResource("1_srjt1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaRojaArea2" unique_id=1355483762]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")
+debug_color = Color(0.74633473, 0, 0.27291563, 0.41960785)
+
+[node name="fichaRojaArea3" type="Area2D" parent="." unique_id=959958241 groups=["Fichas"]]
+position = Vector2(1063, 189)
+scale = Vector2(0.3, 0.3)
+
+[node name="RojoButton3" type="Button" parent="fichaRojaArea3" unique_id=561603498]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_w680n")
+icon = ExtResource("1_srjt1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaRojaArea3" unique_id=2020955593]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")
+debug_color = Color(0.74633473, 0, 0.27291563, 0.41960785)
+
+[node name="fichaRojaArea4" type="Area2D" parent="." unique_id=1855122542 groups=["Fichas"]]
+position = Vector2(1064, 270)
+scale = Vector2(0.3, 0.3)
+
+[node name="RojoButton4" type="Button" parent="fichaRojaArea4" unique_id=665936229]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_w680n")
+icon = ExtResource("1_srjt1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaRojaArea4" unique_id=329451787]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")
+debug_color = Color(0.74633473, 0, 0.27291563, 0.41960785)
+
+[node name="fichaRojaArea5" type="Area2D" parent="." unique_id=424393891 groups=["Fichas"]]
+position = Vector2(1064, 350)
+scale = Vector2(0.3, 0.3)
+
+[node name="RojoButton5" type="Button" parent="fichaRojaArea5" unique_id=1549851729]
+texture_filter = 1
+offset_right = 136.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_w680n")
+icon = ExtResource("1_srjt1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fichaRojaArea5" unique_id=2099442532]
+position = Vector2(70, 69)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7vg10")
+debug_color = Color(0.74633473, 0, 0.27291563, 0.41960785)
