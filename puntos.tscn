@@ -80,6 +80,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jky0q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vg10"]
 size = Vector2(70, 69)
 
@@ -97,8 +100,11 @@ position = Vector2(150, 60)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto1" type="Button" parent="punto" unique_id=1291460337]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto" unique_id=1081544829]
 position = Vector2(70, 69)
@@ -111,8 +117,11 @@ position = Vector2(558, 57)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto2" type="Button" parent="punto2" unique_id=2098765584]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto2" unique_id=1822089190]
 position = Vector2(70, 69)
@@ -125,8 +134,11 @@ position = Vector2(981, 60)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto3" type="Button" parent="punto3" unique_id=794042027]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto3" unique_id=820266850]
 position = Vector2(70, 69)
@@ -139,8 +151,11 @@ position = Vector2(247, 129)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto4" type="Button" parent="punto4" unique_id=351539078]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto4" unique_id=813650769]
 position = Vector2(70, 69)
@@ -153,8 +168,11 @@ position = Vector2(559, 126)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto5" type="Button" parent="punto5" unique_id=1990088826]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto5" unique_id=1319570091]
 position = Vector2(70, 69)
@@ -167,8 +185,11 @@ position = Vector2(883, 129)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto6" type="Button" parent="punto6" unique_id=2068838145]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto6" unique_id=1754860300]
 position = Vector2(70, 69)
@@ -181,8 +202,11 @@ position = Vector2(390, 202)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto7" type="Button" parent="punto7" unique_id=1195118425]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto7" unique_id=1434388858]
 position = Vector2(70, 69)
@@ -195,8 +219,11 @@ position = Vector2(560, 204)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto8" type="Button" parent="punto8" unique_id=2002632265]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto8" unique_id=671169960]
 position = Vector2(70, 69)
@@ -209,8 +236,11 @@ position = Vector2(743, 203)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto9" type="Button" parent="punto9" unique_id=1556135672]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto9" unique_id=1986151672]
 position = Vector2(70, 69)
@@ -223,8 +253,11 @@ position = Vector2(391, 371)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto10" type="Button" parent="punto10" unique_id=875167202]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto10" unique_id=1772523090]
 position = Vector2(70, 69)
@@ -237,8 +270,11 @@ position = Vector2(561, 373)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto11" type="Button" parent="punto11" unique_id=96545580]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto11" unique_id=871839906]
 position = Vector2(70, 69)
@@ -251,8 +287,11 @@ position = Vector2(742, 372)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto12" type="Button" parent="punto12" unique_id=2023968568]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto12" unique_id=869454905]
 position = Vector2(70, 69)
@@ -265,8 +304,11 @@ position = Vector2(247, 454)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto13" type="Button" parent="punto13" unique_id=1057082832]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto13" unique_id=965095657]
 position = Vector2(70, 69)
@@ -279,8 +321,11 @@ position = Vector2(560, 456)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto14" type="Button" parent="punto14" unique_id=726727815]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto14" unique_id=1330915523]
 position = Vector2(70, 69)
@@ -293,8 +338,11 @@ position = Vector2(883, 455)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto15" type="Button" parent="punto15" unique_id=1797584643]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto15" unique_id=1335165310]
 position = Vector2(70, 69)
@@ -307,8 +355,11 @@ position = Vector2(150, 539)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto16" type="Button" parent="punto16" unique_id=67557452]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto16" unique_id=316490087]
 position = Vector2(70, 69)
@@ -321,8 +372,11 @@ position = Vector2(558, 544)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto17" type="Button" parent="punto17" unique_id=541205113]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto17" unique_id=1753789610]
 position = Vector2(70, 69)
@@ -335,8 +389,11 @@ position = Vector2(983, 538)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto18" type="Button" parent="punto18" unique_id=1081782665]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto18" unique_id=794206627]
 position = Vector2(70, 69)
@@ -349,8 +406,11 @@ position = Vector2(143, 283)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto19" type="Button" parent="punto19" unique_id=325143609]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto19" unique_id=230022204]
 position = Vector2(70, 69)
@@ -363,8 +423,11 @@ position = Vector2(246, 282)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto20" type="Button" parent="punto20" unique_id=1949652745]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto20" unique_id=1461918196]
 position = Vector2(70, 69)
@@ -377,8 +440,11 @@ position = Vector2(389, 285)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto21" type="Button" parent="punto21" unique_id=1206396876]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto21" unique_id=573026357]
 position = Vector2(69.99994, 69)
@@ -391,8 +457,11 @@ position = Vector2(743, 284)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto22" type="Button" parent="punto22" unique_id=1485267699]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto22" unique_id=482968179]
 position = Vector2(70, 69)
@@ -405,8 +474,11 @@ position = Vector2(883, 283)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto23" type="Button" parent="punto23" unique_id=232586720]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto23" unique_id=1064632671]
 position = Vector2(70, 69)
@@ -419,8 +491,11 @@ position = Vector2(989, 284)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto24" type="Button" parent="punto24" unique_id=1433197561]
-offset_right = 136.0
-offset_bottom = 136.0
+offset_left = -4.9999995
+offset_top = 4.9999995
+offset_right = 131.0
+offset_bottom = 141.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jky0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="punto24" unique_id=1189627860]
 position = Vector2(70, 69)

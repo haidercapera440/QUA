@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://t3eehxyefi4r" path="res://puntos.tscn" id="3_44uk3"]
 [ext_resource type="PackedScene" uid="uid://b5o71fmg4nihw" path="res://equipo_azul.tscn" id="3_qq4qk"]
 [ext_resource type="PackedScene" uid="uid://cpn0ti2yu8lvb" path="res://equipo_rojo.tscn" id="4_alpgy"]
+[ext_resource type="FontFile" uid="uid://lw8os4u28abm" path="res://Assets/Fonts/BoldPixels.ttf" id="5_alpgy"]
+[ext_resource type="PackedScene" uid="uid://drnq3s4mlqhjp" path="res://Scenes/eliminar_ficha.tscn" id="6_0yil4"]
 
 [node name="MesaJuego" type="Node2D" unique_id=362145428]
 script = ExtResource("1_7vg10")
@@ -13,39 +15,35 @@ scale = Vector2(0.9, 0.9)
 
 [node name="EquipoAzul" parent="." unique_id=2114332147 instance=ExtResource("3_qq4qk")]
 
-[node name="fichaAzulArea" parent="EquipoAzul" index="0" unique_id=1898192580 groups=["Azul"]]
-
-[node name="AzulButton1" parent="EquipoAzul/fichaAzulArea" index="0" unique_id=50809359]
+[node name="AzulButton1" parent="EquipoAzul/fichaAzulArea" parent_id_path=PackedInt32Array(2114332147, 1898192580) index="0" unique_id=50809359]
 metadata/_edit_use_anchors_ = true
 
-[node name="fichaAzulArea2" parent="EquipoAzul" index="1" unique_id=1310518842 groups=["Azul"]]
-
-[node name="fichaAzulArea3" parent="EquipoAzul" index="2" unique_id=1813671060 groups=["Azul"]]
-
-[node name="fichaAzulArea4" parent="EquipoAzul" index="3" unique_id=257416020 groups=["Azul"]]
-
-[node name="fichaAzulArea5" parent="EquipoAzul" index="4" unique_id=57746305 groups=["Azul"]]
-
 [node name="EquipoRojo" parent="." unique_id=630734687 instance=ExtResource("4_alpgy")]
-
-[node name="fichaRojaArea" parent="EquipoRojo" index="0" unique_id=1932904623 groups=["Rojo"]]
-
-[node name="fichaRojaArea2" parent="EquipoRojo" index="1" unique_id=2034776930 groups=["Rojo"]]
-
-[node name="fichaRojaArea3" parent="EquipoRojo" index="2" unique_id=959958241 groups=["Rojo"]]
-
-[node name="fichaRojaArea4" parent="EquipoRojo" index="3" unique_id=1855122542 groups=["Rojo"]]
-
-[node name="fichaRojaArea5" parent="EquipoRojo" index="4" unique_id=424393891 groups=["Rojo"]]
 
 [node name="textTurno" type="Label" parent="." unique_id=171870360]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 609.0
-offset_right = 649.0
-offset_bottom = 23.0
+offset_left = 484.0
+offset_top = 1.0
+offset_right = 556.0
+offset_bottom = 29.0
 grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("5_alpgy")
+theme_override_font_sizes/font_size = 32
+text = "AZUL"
+
+[node name="EliminarFicha" parent="." unique_id=253722770 instance=ExtResource("6_0yil4")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = 563.0
+offset_top = 468.0
+offset_right = 563.0
+offset_bottom = 468.0
+grow_vertical = 0
 
 [connection signal="area_entered" from="Puntos/punto" to="." method="_on_punto_area_entered"]
 [connection signal="area_exited" from="Puntos/punto" to="." method="_on_punto_area_exited"]
@@ -129,7 +127,10 @@ grow_horizontal = 2
 [connection signal="pressed" from="EquipoRojo/fichaRojaArea3/RojoButton3" to="." method="_on_rojo_button_3_pressed"]
 [connection signal="pressed" from="EquipoRojo/fichaRojaArea4/RojoButton4" to="." method="_on_rojo_button_4_pressed"]
 [connection signal="pressed" from="EquipoRojo/fichaRojaArea5/RojoButton5" to="." method="_on_rojo_button_5_pressed"]
+[connection signal="pressed" from="EliminarFicha/HBoxContainer/Cancelar" to="." method="_on_cancelar_pressed"]
+[connection signal="pressed" from="EliminarFicha/HBoxContainer/Eliminar" to="." method="_on_eliminar_pressed"]
 
 [editable path="Puntos"]
 [editable path="EquipoAzul"]
 [editable path="EquipoRojo"]
+[editable path="EliminarFicha"]

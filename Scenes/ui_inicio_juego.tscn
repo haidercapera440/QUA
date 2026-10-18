@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://c6sh21vvy3r0g"]
+
+[ext_resource type="FontFile" uid="uid://lw8os4u28abm" path="res://Assets/Fonts/BoldPixels.ttf" id="1_i5f5h"]
+[ext_resource type="Script" uid="uid://bxaibw2o8rjvl" path="res://Scenes/ui_inicio_juego.gd" id="1_k1ocl"]
+
+[node name="UiInicioJuego" type="Control" unique_id=2102847439]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k1ocl")
+
+[node name="Menu" type="Control" parent="." unique_id=132340596]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPrincipal" type="VBoxContainer" parent="Menu" unique_id=1015901491]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -20.5
+offset_right = 115.5
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play Ofline" type="Button" parent="Menu/MenuPrincipal" unique_id=1151185080]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_i5f5h")
+theme_override_font_sizes/font_size = 36
+text = "Play Ofline"
+
+[node name="Crear" type="Button" parent="Menu/MenuPrincipal" unique_id=452326168]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_i5f5h")
+theme_override_font_sizes/font_size = 36
+text = "Crear Partida"
+
+[node name="Unirte" type="Button" parent="Menu/MenuPrincipal" unique_id=351646682]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_i5f5h")
+theme_override_font_sizes/font_size = 36
+text = "Unirte partida"
+
+[node name="QUA" type="Label" parent="Menu" unique_id=123909167]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -202.5
+offset_top = 48.0
+offset_right = 202.5
+offset_bottom = 258.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 240
+text = "QUA"
+
+[node name="partidaOfline" type="Control" parent="." unique_id=1015512147]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="partidaOfline" unique_id=2057158676]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -429.0
+offset_top = 139.0
+offset_right = 429.0
+offset_bottom = 263.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 140
+text = "Departure QUA"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="partidaOfline" unique_id=386695566]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -58.0
+offset_right = 139.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="P1" type="LineEdit" parent="partidaOfline/VBoxContainer" unique_id=1871809524]
+layout_mode = 2
+theme_override_colors/font_color = Color(4.7168137e-06, 0.59283704, 0.7612661, 1)
+theme_override_font_sizes/font_size = 32
+placeholder_text = "P1 Enter your name"
+
+[node name="P2" type="LineEdit" parent="partidaOfline/VBoxContainer" unique_id=1880158726]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.99999994, 0.14747256, 0.23011842, 1)
+theme_override_font_sizes/font_size = 32
+placeholder_text = "P2 Enter your name"
+
+[node name="Play" type="Button" parent="partidaOfline/VBoxContainer" unique_id=1313527400]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[connection signal="pressed" from="Menu/MenuPrincipal/Play Ofline" to="." method="_on_play_ofline_pressed"]
+[connection signal="text_changed" from="partidaOfline/VBoxContainer/P1" to="." method="_on_p_1_text_changed"]
+[connection signal="text_changed" from="partidaOfline/VBoxContainer/P2" to="." method="_on_p_2_text_changed"]
+[connection signal="pressed" from="partidaOfline/VBoxContainer/Play" to="." method="_on_play_pressed"]

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://drnq3s4mlqhjp"]
+
+[ext_resource type="FontFile" uid="uid://lw8os4u28abm" path="res://Assets/Fonts/BoldPixels.ttf" id="1_wdepu"]
+
+[node name="EliminarFicha" type="Control" unique_id=253722770]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1703884163]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.86100006
+anchor_right = 0.5
+anchor_bottom = 0.86100006
+offset_left = -172.0
+offset_top = -35.92804
+offset_right = 148.0
+offset_bottom = 20.07196
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 53
+
+[node name="Cancelar" type="Button" parent="HBoxContainer" unique_id=449533812]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wdepu")
+theme_override_font_sizes/font_size = 34
+text = "Cancel"
+
+[node name="Eliminar" type="Button" parent="HBoxContainer" unique_id=1747404746]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wdepu")
+theme_override_font_sizes/font_size = 34
+text = "eliminate"

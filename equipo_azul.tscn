@@ -10,7 +10,7 @@ size = Vector2(70, 69)
 
 [node name="EquipoAzul" type="Node2D" unique_id=2114332147]
 
-[node name="fichaAzulArea" type="Area2D" parent="." unique_id=1898192580 groups=["Fichas"]]
+[node name="fichaAzulArea" type="Area2D" parent="." unique_id=1898192580 groups=["Azul", "Fichas"]]
 position = Vector2(29, 573)
 scale = Vector2(0.3, 0.3)
 
@@ -28,7 +28,7 @@ position = Vector2(70, 69)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7vg10")
 
-[node name="fichaAzulArea2" type="Area2D" parent="." unique_id=1310518842 groups=["Fichas"]]
+[node name="fichaAzulArea2" type="Area2D" parent="." unique_id=1310518842 groups=["Azul", "Fichas"]]
 position = Vector2(121, 573)
 scale = Vector2(0.3, 0.3)
 
@@ -46,7 +46,7 @@ position = Vector2(70, 69)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7vg10")
 
-[node name="fichaAzulArea3" type="Area2D" parent="." unique_id=1813671060 groups=["Fichas"]]
+[node name="fichaAzulArea3" type="Area2D" parent="." unique_id=1813671060 groups=["Azul", "Fichas"]]
 position = Vector2(218, 574)
 scale = Vector2(0.3, 0.3)
 
@@ -64,7 +64,7 @@ position = Vector2(70, 69)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7vg10")
 
-[node name="fichaAzulArea4" type="Area2D" parent="." unique_id=257416020 groups=["Fichas"]]
+[node name="fichaAzulArea4" type="Area2D" parent="." unique_id=257416020 groups=["Azul", "Fichas"]]
 position = Vector2(311, 573)
 scale = Vector2(0.3, 0.3)
 
@@ -82,7 +82,7 @@ position = Vector2(70, 69)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7vg10")
 
-[node name="fichaAzulArea5" type="Area2D" parent="." unique_id=57746305 groups=["Fichas"]]
+[node name="fichaAzulArea5" type="Area2D" parent="." unique_id=57746305 groups=["Azul", "Fichas"]]
 position = Vector2(402, 574)
 scale = Vector2(0.3, 0.3)
 

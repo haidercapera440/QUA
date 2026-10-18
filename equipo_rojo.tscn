@@ -13,7 +13,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="EquipoRojo" type="Node2D" unique_id=630734687]
 
-[node name="fichaRojaArea" type="Area2D" parent="." unique_id=1932904623 groups=["Fichas"]]
+[node name="fichaRojaArea" type="Area2D" parent="." unique_id=1932904623 groups=["Fichas", "Rojo"]]
 position = Vector2(1063, 20)
 scale = Vector2(0.3, 0.3)
 
@@ -32,7 +32,7 @@ scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.74633473, 0, 0.27291563, 0.41960785)
 
-[node name="fichaRojaArea2" type="Area2D" parent="." unique_id=2034776930 groups=["Fichas"]]
+[node name="fichaRojaArea2" type="Area2D" parent="." unique_id=2034776930 groups=["Fichas", "Rojo"]]
 position = Vector2(1063, 106)
 scale = Vector2(0.3, 0.3)
 
@@ -51,7 +51,7 @@ scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.74633473, 0, 0.27291563, 0.41960785)
 
-[node name="fichaRojaArea3" type="Area2D" parent="." unique_id=959958241 groups=["Fichas"]]
+[node name="fichaRojaArea3" type="Area2D" parent="." unique_id=959958241 groups=["Fichas", "Rojo"]]
 position = Vector2(1063, 189)
 scale = Vector2(0.3, 0.3)
 
@@ -70,7 +70,7 @@ scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.74633473, 0, 0.27291563, 0.41960785)
 
-[node name="fichaRojaArea4" type="Area2D" parent="." unique_id=1855122542 groups=["Fichas"]]
+[node name="fichaRojaArea4" type="Area2D" parent="." unique_id=1855122542 groups=["Fichas", "Rojo"]]
 position = Vector2(1064, 270)
 scale = Vector2(0.3, 0.3)
 
@@ -89,7 +89,7 @@ scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.74633473, 0, 0.27291563, 0.41960785)
 
-[node name="fichaRojaArea5" type="Area2D" parent="." unique_id=424393891 groups=["Fichas"]]
+[node name="fichaRojaArea5" type="Area2D" parent="." unique_id=424393891 groups=["Fichas", "Rojo"]]
 position = Vector2(1064, 350)
 scale = Vector2(0.3, 0.3)
 
