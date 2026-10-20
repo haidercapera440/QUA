@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://djwqxei55n14d"]
+
+[ext_resource type="PackedScene" uid="uid://ce0fw05t51bi6" path="res://Assets/Modelo3D/CraneoDemonio/CraneoDemonio.blend" id="1_cty7i"]
+[ext_resource type="PackedScene" uid="uid://dw8xrqgygucyd" path="res://Assets/Modelo3D/CraneoDemonio/TableroQua.blend" id="2_1ao6j"]
+[ext_resource type="PackedScene" uid="uid://eqhuuuiaku28" path="res://Assets/Modelo3D/CraneoDemonio/BaseFicha.blend" id="3_of8vo"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cty7i"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_1ao6j"]
+sky_material = SubResource("ProceduralSkyMaterial_cty7i")
+
+[sub_resource type="Environment" id="Environment_of8vo"]
+background_mode = 2
+sky = SubResource("Sky_1ao6j")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="TableroJuego" type="Node3D" unique_id=41118037]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=786008291]
+environment = SubResource("Environment_of8vo")
+
+[node name="CraneoDemonio" parent="." unique_id=829306404 instance=ExtResource("1_cty7i")]
+transform = Transform3D(3.9358766, -0.7133542, 0, 0.7133542, 3.9358766, 0, 0, 0, 4, -8.9742155, 4.120162, 0)
+
+[node name="AnimationPlayer" parent="CraneoDemonio" index="2" unique_id=1167883835]
+autoplay = &"Idle"
+
+[node name="TableroQua" parent="." unique_id=1745339260 instance=ExtResource("2_1ao6j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.111107)
+
+[node name="BaseFicha" parent="." unique_id=1852523065 instance=ExtResource("3_of8vo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3662262, 0, -0.095523894)
+
+[node name="Light" parent="BaseFicha" index="0" unique_id=967270801]
+transform = Transform3D(-0.2908647, -0.77110094, 0.56639314, -0.05518904, 0.6045247, 0.79467237, -0.95517117, 0.19988346, -0.2183912, 1.4616373, 8.214708, 0.059387416)
+light_color = Color(1, 0.39729244, 0.39724222, 1)
+shadow_enabled = true
+omni_range = 6.253
+omni_attenuation = 1.78
+omni_shadow_mode = 0
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=274035975]
+size = Vector2i(809, 408)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1850703031]
+transform = Transform3D(-3.9076163e-08, -0.4481491, 0.8939588, -1.9589212e-08, 0.8939588, 0.4481491, -1, 6.0465e-16, -4.371137e-08, 15.746376, 7.20643, -0.23206425)
+
+[editable path="CraneoDemonio"]
+[editable path="BaseFicha"]

@@ -1,84 +1,9 @@
 [gd_scene format=3 uid="uid://t3eehxyefi4r"]
 
-[ext_resource type="Texture2D" uid="uid://r1s0uhu65tuj" path="res://Sprite/AnimSprite/Tablero_QUA.png" id="1_dvmxb"]
+[ext_resource type="PackedScene" uid="uid://djwqxei55n14d" path="res://Scenes/tablero_juego.tscn" id="2_dvmxb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yv3ke"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(0, 0, 720, 440)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_24i65"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(720, 0, 720, 440)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_la26u"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(1440, 0, 720, 440)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5icox"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(2160, 0, 720, 440)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wyxwm"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(2880, 0, 720, 440)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qq2e6"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(3600, 0, 720, 440)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_icj08"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(4320, 0, 720, 440)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_flcjy"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(5040, 0, 720, 440)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_205sn"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(5760, 0, 720, 440)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eu23l"]
-atlas = ExtResource("1_dvmxb")
-region = Rect2(6480, 0, 720, 440)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_d4fxa"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yv3ke")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_24i65")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_la26u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5icox")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wyxwm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qq2e6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_icj08")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_flcjy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_205sn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eu23l")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="ViewportTexture" id="ViewportTexture_jky0q"]
+viewport_path = NodePath("TableroJuego/SubViewport")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jky0q"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -88,15 +13,15 @@ size = Vector2(70, 69)
 
 [node name="Puntos" type="Node2D" unique_id=764590296]
 
-[node name="MesaTriqui" type="AnimatedSprite2D" parent="." unique_id=1938556229]
-position = Vector2(581, 317.5)
-scale = Vector2(1.261111, 1.2613636)
-sprite_frames = SubResource("SpriteFrames_d4fxa")
-autoplay = "default"
-frame_progress = 0.80791384
+[node name="TableroJuego" parent="." unique_id=41118037 instance=ExtResource("2_dvmxb")]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=16667269]
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = SubResource("ViewportTexture_jky0q")
 
 [node name="punto" type="Area2D" parent="." unique_id=724158467]
-position = Vector2(150, 60)
+position = Vector2(348, 246.99998)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto1" type="Button" parent="punto" unique_id=1291460337]
@@ -113,7 +38,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto2" type="Area2D" parent="." unique_id=2146397346]
-position = Vector2(558, 57)
+position = Vector2(556, 249.99998)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto2" type="Button" parent="punto2" unique_id=2098765584]
@@ -130,7 +55,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto3" type="Area2D" parent="." unique_id=1586465222]
-position = Vector2(981, 60)
+position = Vector2(786, 245.99998)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto3" type="Button" parent="punto3" unique_id=794042027]
@@ -147,7 +72,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto4" type="Area2D" parent="." unique_id=451539655]
-position = Vector2(247, 129)
+position = Vector2(385, 267)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto4" type="Button" parent="punto4" unique_id=351539078]
@@ -164,7 +89,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto5" type="Area2D" parent="." unique_id=882053307]
-position = Vector2(559, 126)
+position = Vector2(557, 276)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto5" type="Button" parent="punto5" unique_id=1990088826]
@@ -181,7 +106,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto6" type="Area2D" parent="." unique_id=690717934]
-position = Vector2(883, 129)
+position = Vector2(757, 267)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto6" type="Button" parent="punto6" unique_id=2068838145]
@@ -198,7 +123,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto7" type="Area2D" parent="." unique_id=1367575172]
-position = Vector2(390, 202)
+position = Vector2(421, 289)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto7" type="Button" parent="punto7" unique_id=1195118425]
@@ -215,7 +140,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto8" type="Area2D" parent="." unique_id=961675704]
-position = Vector2(560, 204)
+position = Vector2(560, 299)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto8" type="Button" parent="punto8" unique_id=2002632265]
@@ -232,7 +157,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto9" type="Area2D" parent="." unique_id=277182506]
-position = Vector2(743, 203)
+position = Vector2(719, 288)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto9" type="Button" parent="punto9" unique_id=1556135672]
@@ -249,7 +174,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto10" type="Area2D" parent="." unique_id=173052709]
-position = Vector2(391, 371)
+position = Vector2(347, 423)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto10" type="Button" parent="punto10" unique_id=875167202]
@@ -266,7 +191,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto11" type="Area2D" parent="." unique_id=420185904]
-position = Vector2(561, 373)
+position = Vector2(554, 424)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto11" type="Button" parent="punto11" unique_id=96545580]
@@ -283,7 +208,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto12" type="Area2D" parent="." unique_id=1810101801]
-position = Vector2(742, 372)
+position = Vector2(799, 422)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto12" type="Button" parent="punto12" unique_id=2023968568]
@@ -300,7 +225,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto13" type="Area2D" parent="." unique_id=1089483100]
-position = Vector2(247, 454)
+position = Vector2(226, 480)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto13" type="Button" parent="punto13" unique_id=1057082832]
@@ -317,7 +242,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto14" type="Area2D" parent="." unique_id=1081887544]
-position = Vector2(560, 456)
+position = Vector2(551, 488)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto14" type="Button" parent="punto14" unique_id=726727815]
@@ -334,7 +259,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto15" type="Area2D" parent="." unique_id=1246002100]
-position = Vector2(883, 455)
+position = Vector2(917, 474)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto15" type="Button" parent="punto15" unique_id=1797584643]
@@ -351,7 +276,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto16" type="Area2D" parent="." unique_id=1846594680]
-position = Vector2(150, 539)
+position = Vector2(93.00001, 540)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto16" type="Button" parent="punto16" unique_id=67557452]
@@ -368,7 +293,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto17" type="Area2D" parent="." unique_id=1407143211]
-position = Vector2(558, 544)
+position = Vector2(553, 546)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto17" type="Button" parent="punto17" unique_id=541205113]
@@ -385,7 +310,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto18" type="Area2D" parent="." unique_id=110769896]
-position = Vector2(983, 538)
+position = Vector2(1045, 535)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto18" type="Button" parent="punto18" unique_id=1081782665]
@@ -402,7 +327,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto19" type="Area2D" parent="." unique_id=1041278980]
-position = Vector2(143, 283)
+position = Vector2(259, 344)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto19" type="Button" parent="punto19" unique_id=325143609]
@@ -419,7 +344,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto20" type="Area2D" parent="." unique_id=568922718]
-position = Vector2(246, 282)
+position = Vector2(317, 344)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto20" type="Button" parent="punto20" unique_id=1949652745]
@@ -436,7 +361,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto21" type="Area2D" parent="." unique_id=1138610384]
-position = Vector2(389, 285)
+position = Vector2(382, 353)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto21" type="Button" parent="punto21" unique_id=1206396876]
@@ -453,7 +378,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto22" type="Area2D" parent="." unique_id=647564550]
-position = Vector2(743, 284)
+position = Vector2(758, 344)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto22" type="Button" parent="punto22" unique_id=1485267699]
@@ -470,7 +395,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto23" type="Area2D" parent="." unique_id=315340840]
-position = Vector2(883, 283)
+position = Vector2(824, 342)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto23" type="Button" parent="punto23" unique_id=232586720]
@@ -487,7 +412,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto24" type="Area2D" parent="." unique_id=853632867]
-position = Vector2(989, 284)
+position = Vector2(885, 338)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto24" type="Button" parent="punto24" unique_id=1433197561]
@@ -502,3 +427,7 @@ position = Vector2(70, 69)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
+
+[editable path="TableroJuego"]
+[editable path="TableroJuego/CraneoDemonio"]
+[editable path="TableroJuego/BaseFicha"]

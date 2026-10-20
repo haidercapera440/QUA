@@ -6,12 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://cpn0ti2yu8lvb" path="res://equipo_rojo.tscn" id="4_alpgy"]
 [ext_resource type="FontFile" uid="uid://lw8os4u28abm" path="res://Assets/Fonts/BoldPixels.ttf" id="5_alpgy"]
 [ext_resource type="PackedScene" uid="uid://drnq3s4mlqhjp" path="res://Scenes/eliminar_ficha.tscn" id="6_0yil4"]
+[ext_resource type="PackedScene" uid="uid://djwqxei55n14d" path="res://Scenes/tablero_juego.tscn" id="7_seof4"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_seof4"]
+viewport_path = NodePath("TableroJuego/SubViewport")
 
 [node name="MesaJuego" type="Node2D" unique_id=362145428]
 script = ExtResource("1_7vg10")
 
 [node name="Puntos" parent="." unique_id=764590296 instance=ExtResource("3_44uk3")]
-scale = Vector2(0.9, 0.9)
+
+[node name="TextureRect" parent="Puntos" index="1" unique_id=16667269]
+texture = SubResource("ViewportTexture_seof4")
 
 [node name="EquipoAzul" parent="." unique_id=2114332147 instance=ExtResource("3_qq4qk")]
 
@@ -44,6 +50,8 @@ offset_top = 468.0
 offset_right = 563.0
 offset_bottom = 468.0
 grow_vertical = 0
+
+[node name="TableroJuego" parent="." unique_id=41118037 instance=ExtResource("7_seof4")]
 
 [connection signal="area_entered" from="Puntos/punto" to="." method="_on_punto_area_entered"]
 [connection signal="area_exited" from="Puntos/punto" to="." method="_on_punto_area_exited"]
@@ -131,6 +139,12 @@ grow_vertical = 0
 [connection signal="pressed" from="EliminarFicha/HBoxContainer/Eliminar" to="." method="_on_eliminar_pressed"]
 
 [editable path="Puntos"]
+[editable path="Puntos/TableroJuego"]
+[editable path="Puntos/TableroJuego/CraneoDemonio"]
+[editable path="Puntos/TableroJuego/BaseFicha"]
 [editable path="EquipoAzul"]
 [editable path="EquipoRojo"]
 [editable path="EliminarFicha"]
+[editable path="TableroJuego"]
+[editable path="TableroJuego/CraneoDemonio"]
+[editable path="TableroJuego/BaseFicha"]
