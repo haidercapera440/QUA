@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ce0fw05t51bi6" path="res://Assets/Modelo3D/CraneoDemonio/CraneoDemonio.blend" id="1_cty7i"]
 [ext_resource type="PackedScene" uid="uid://dw8xrqgygucyd" path="res://Assets/Modelo3D/CraneoDemonio/TableroQua.blend" id="2_1ao6j"]
-[ext_resource type="PackedScene" uid="uid://eqhuuuiaku28" path="res://Assets/Modelo3D/CraneoDemonio/BaseFicha.blend" id="3_of8vo"]
+[ext_resource type="PackedScene" uid="uid://due7wi6b7fkfg" path="res://Scenes/materiales_juego/FichaAzul.tscn" id="3_cty7i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cty7i"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -25,30 +25,24 @@ glow_enabled = true
 environment = SubResource("Environment_of8vo")
 
 [node name="CraneoDemonio" parent="." unique_id=829306404 instance=ExtResource("1_cty7i")]
-transform = Transform3D(3.9358766, -0.7133542, 0, 0.7133542, 3.9358766, 0, 0, 0, 4, -8.9742155, 4.120162, 0)
+transform = Transform3D(3.4607458, -2.0058014, 0, 2.0058014, 3.4607458, 0, 0, 0, 4, -8.662592, 1.0274305, -0.40325308)
+
+[node name="Craneo" parent="CraneoDemonio/Esqueleto/Skeleton3D/Hueso_001" parent_id_path=PackedInt32Array(829306404, 1134019099) index="0" unique_id=404916587]
+transform = Transform3D(0.19778588, -0.9751762, 0.099560454, 0.98003936, 0.19880319, 0.00030320385, -0.020088617, 0.09751321, 0.99503154, 0.41733134, 0.43440318, -0.041889533)
 
 [node name="AnimationPlayer" parent="CraneoDemonio" index="2" unique_id=1167883835]
 autoplay = &"Idle"
 
-[node name="TableroQua" parent="." unique_id=1745339260 instance=ExtResource("2_1ao6j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.111107)
-
-[node name="BaseFicha" parent="." unique_id=1852523065 instance=ExtResource("3_of8vo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3662262, 0, -0.095523894)
-
-[node name="Light" parent="BaseFicha" index="0" unique_id=967270801]
-transform = Transform3D(-0.2908647, -0.77110094, 0.56639314, -0.05518904, 0.6045247, 0.79467237, -0.95517117, 0.19988346, -0.2183912, 1.4616373, 8.214708, 0.059387416)
-light_color = Color(1, 0.39729244, 0.39724222, 1)
-shadow_enabled = true
-omni_range = 6.253
-omni_attenuation = 1.78
-omni_shadow_mode = 0
+[node name="TableroQua" parent="." unique_id=1158037374 instance=ExtResource("2_1ao6j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3528347, 0, -0.011282921)
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=274035975]
 size = Vector2i(809, 408)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1850703031]
-transform = Transform3D(-3.9076163e-08, -0.4481491, 0.8939588, -1.9589212e-08, 0.8939588, 0.4481491, -1, 6.0465e-16, -4.371137e-08, 15.746376, 7.20643, -0.23206425)
+transform = Transform3D(-3.2446582e-08, -0.67007685, 0.7422918, -2.9289973e-08, 0.7422918, 0.67007685, -1, -3.5527137e-15, -4.3711367e-08, 14.854349, 9.847082, -0.23206425)
+
+[node name="Node3D" parent="." unique_id=1832267702 instance=ExtResource("3_cty7i")]
+transform = Transform3D(0.008726192, 0, -0.49992386, 0, 0.5, 0, 0.49992386, 0, 0.008726192, 0.6490717, 1.423286, 8.8998995)
 
 [editable path="CraneoDemonio"]
-[editable path="BaseFicha"]
