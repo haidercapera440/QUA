@@ -1,0 +1,323 @@
+[gd_scene format=3 uid="uid://c6sh21vvy3r0g"]
+
+[ext_resource type="FontFile" uid="uid://lw8os4u28abm" path="res://Assets/Fonts/BoldPixels.ttf" id="1_i5f5h"]
+[ext_resource type="Script" uid="uid://bxaibw2o8rjvl" path="res://Scenes/ui_inicio_juego.gd" id="1_k1ocl"]
+[ext_resource type="PackedScene" uid="uid://ce0fw05t51bi6" path="res://Assets/Modelo3D/CraneoDemonio/CraneoDemonio.blend" id="3_dh5uo"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dh5uo"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_3o66j"]
+sky_material = SubResource("ProceduralSkyMaterial_dh5uo")
+
+[sub_resource type="Environment" id="Environment_1tqn2"]
+background_mode = 2
+sky = SubResource("Sky_3o66j")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_dh5uo"]
+viewport_path = NodePath("CraneoDemonio/SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh5uo"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="UiInicioJuego" type="Control" unique_id=2102847439]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k1ocl")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=750969042]
+environment = SubResource("Environment_1tqn2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1675433497]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_dh5uo")
+
+[node name="Panel" type="Panel" parent="." unique_id=1400599181]
+modulate = Color(1, 1, 1, 0.34509805)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dh5uo")
+
+[node name="Menu" type="Control" parent="." unique_id=132340596]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPrincipal" type="VBoxContainer" parent="Menu" unique_id=1015901491]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.5
+offset_top = -20.5
+offset_right = 115.5
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play Ofline" type="Button" parent="Menu/MenuPrincipal" unique_id=1151185080]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_i5f5h")
+theme_override_font_sizes/font_size = 36
+text = "Play Ofline"
+
+[node name="Informacion" type="Button" parent="Menu/MenuPrincipal" unique_id=452326168]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_i5f5h")
+theme_override_font_sizes/font_size = 36
+text = "Information"
+
+[node name="Quit" type="Button" parent="Menu/MenuPrincipal" unique_id=351646682]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_i5f5h")
+theme_override_font_sizes/font_size = 36
+text = "Quit"
+
+[node name="QUA" type="Label" parent="Menu" unique_id=123909167]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -202.5
+offset_top = 48.0
+offset_right = 202.5
+offset_bottom = 258.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_font_sizes/font_size = 240
+text = "QUA"
+
+[node name="partidaOfline" type="Control" parent="." unique_id=1015512147]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="partidaOfline" unique_id=2057158676]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -429.0
+offset_top = 139.0
+offset_right = 429.0
+offset_bottom = 263.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_font_sizes/font_size = 140
+text = "Departure QUA"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="partidaOfline" unique_id=386695566]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -58.0
+offset_right = 139.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="P1" type="LineEdit" parent="partidaOfline/VBoxContainer" unique_id=1871809524]
+layout_mode = 2
+theme_override_colors/font_color = Color(4.7168137e-06, 0.59283704, 0.7612661, 1)
+theme_override_font_sizes/font_size = 32
+placeholder_text = "P1 Enter your name"
+
+[node name="P2" type="LineEdit" parent="partidaOfline/VBoxContainer" unique_id=1880158726]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.99999994, 0.14747256, 0.23011842, 1)
+theme_override_font_sizes/font_size = 32
+placeholder_text = "P2 Enter your name"
+
+[node name="Play" type="Button" parent="partidaOfline/VBoxContainer" unique_id=1313527400]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[node name="Volver" type="Button" parent="partidaOfline" unique_id=913276416]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 51.0
+offset_right = 188.0
+offset_bottom = 93.0
+text = "return"
+
+[node name="CraneoDemonio" parent="." unique_id=829306404 instance=ExtResource("3_dh5uo")]
+
+[node name="Light" parent="CraneoDemonio" index="0" unique_id=1260733017]
+transform = Transform3D(-0.2908647, -0.77110094, 0.56639314, -0.05518904, 0.6045247, 0.79467237, -0.95517117, 0.19988346, -0.2183912, 4.454508, 4.8206367, -1.005454)
+light_color = Color(0.43137255, 0.52156866, 0.4745098, 1)
+light_energy = 10.0
+
+[node name="Skeleton3D" parent="CraneoDemonio/Esqueleto" parent_id_path=PackedInt32Array(829306404, 1445600966) index="0" unique_id=1785502352]
+bones/1/rotation = Quaternion(-0.017731262, -0.04658184, -0.3581454, 0.93233454)
+bones/2/rotation = Quaternion(-0.2637466, -0.45967925, -0.35196584, 0.7715263)
+bones/3/rotation = Quaternion(-0.060888663, 2.9012991e-08, -0.10672912, 0.99242204)
+
+[node name="Hueso_001" parent="CraneoDemonio/Esqueleto/Skeleton3D" index="0" unique_id=1134019099]
+transform = Transform3D(0.73912406, 0.6694744, -0.074158974, -0.6661707, 0.74283487, 0.06642908, 0.09956045, 0.00030320135, 0.9950315, 0, 1.0000002, 0)
+
+[node name="Hueso_003" parent="CraneoDemonio/Esqueleto/Skeleton3D" index="1" unique_id=1667725006]
+transform = Transform3D(0.14889672, 0.8949718, -0.42054176, -0.41416287, 0.4426257, 0.79533124, 0.89794135, 0.055750556, 0.43656966, 0.7536305, 0.5881808, -0.08000053)
+
+[node name="Madibula" parent="CraneoDemonio/Esqueleto/Skeleton3D/Hueso_003" index="0" unique_id=486575957]
+transform = Transform3D(-0.04619821, -0.43768364, 0.89794165, 0.9984044, 0.008993391, 0.05575057, -0.032476626, 0.8990842, 0.43656978, -0.15171258, -0.05113604, 0.50182253)
+
+[node name="AnimationPlayer" parent="CraneoDemonio" index="2" unique_id=1167883835]
+autoplay = &"Hablar_001"
+
+[node name="SubViewport" type="SubViewport" parent="CraneoDemonio" unique_id=52598524]
+size = Vector2i(512, 287)
+
+[node name="Camera3D" type="Camera3D" parent="CraneoDemonio/SubViewport" unique_id=158082471]
+transform = Transform3D(-4.3342393e-08, 0.12966093, 0.9915584, 5.6676592e-09, 0.9915584, -0.12966093, -1, -4.440892e-16, -4.371139e-08, 3.3305044, -0.26416016, 0.01141727)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CraneoDemonio" unique_id=1945650390]
+transform = Transform3D(0.9659259, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, 0.9659258, 2, 0, 3)
+light_color = Color(0.3529412, 1, 1, 1)
+light_energy = 7.647
+light_indirect_energy = 1.375
+light_volumetric_fog_energy = 2.99
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="CraneoDemonio" unique_id=911138905]
+transform = Transform3D(0.9222243, -0.007706416, 0.3865787, 0.014781438, -0.99836785, -0.05516505, 0.38637292, 0.056588735, -0.92060506, 2.3454418, 0, -3.1711273)
+light_color = Color(0.98747593, 0, 0.23859534, 1)
+light_energy = 7.647
+light_indirect_energy = 1.375
+light_volumetric_fog_energy = 2.99
+
+[node name="InfQua" type="Control" parent="." unique_id=408818883]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="InfQua" unique_id=1259432417]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -259.0
+offset_right = 20.0
+offset_bottom = -245.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 94
+text = "INFORMATION"
+
+[node name="Volver" type="Button" parent="InfQua" unique_id=683345322]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 51.0
+offset_right = 188.0
+offset_bottom = 93.0
+text = "return"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="InfQua" unique_id=1773765945]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 124.0
+offset_right = 1057.0
+offset_bottom = 601.0
+vertical_scroll_mode = 2
+scroll_hint_mode = 3
+
+[node name="VBoxContainer" type="GridContainer" parent="InfQua/ScrollContainer" unique_id=1188562684]
+layout_mode = 2
+
+[node name="Contenido" type="Label" parent="InfQua/ScrollContainer/VBoxContainer" unique_id=1557879172]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Game Rules
+
+The game is divided into three main phases: placement, 
+movement, and capture and victory
+
+Phase 1: Setup and Placement
+
+1. Starting Pieces: Each player starts with 5 pieces, for a total of 10 
+pieces on the board.
+
+2. Turn-Based Placement: Players take turns placing one piece at a 
+time on empty points on the board.
+
+3. No ¡QUA! During Placement: Players are not allowed to align 3 
+pieces before all 10 pieces have been placed on the board. If a 
+player does so during this phase, that line is permanently
+ invalidated, and neither player can score a ¡QUA! on that line 
+for the rest of the game.
+
+Phase 2: Movement
+
+4. One Move Per Turn: Once all 10 pieces have been placed, 
+players take turns moving one piece per turn.
+
+5. Adjacent Movement: Pieces can only move one point at a
+ time to a connected, empty vertex. Jumping over other pieces or 
+skipping points is not allowed.
+
+Phase 3: Capture and Victory
+
+6. ¡QUA! Reward: When a player aligns 3 of their own pieces 
+along a valid line (achieving a ¡QUA!), they earn the right to 
+remove one opponent's piece of their choice. Only one piece can 
+be removed for each ¡QUA! achieved.
+
+7. One-Time Lines: A ¡QUA! can only be scored once on the 
+same three-point line. If the same line is formed again, it has no 
+effect.
+
+8. Victory Condition: A player who is left with only 2 pieces on 
+the board immediately loses the game, as they can no longer 
+form a new ¡QUA!."
+
+[connection signal="pressed" from="Menu/MenuPrincipal/Play Ofline" to="." method="_on_play_ofline_pressed"]
+[connection signal="pressed" from="Menu/MenuPrincipal/Informacion" to="." method="_on_informacion_pressed"]
+[connection signal="pressed" from="Menu/MenuPrincipal/Quit" to="." method="_on_quit_pressed"]
+[connection signal="text_changed" from="partidaOfline/VBoxContainer/P1" to="." method="_on_p_1_text_changed"]
+[connection signal="text_changed" from="partidaOfline/VBoxContainer/P2" to="." method="_on_p_2_text_changed"]
+[connection signal="pressed" from="partidaOfline/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="partidaOfline/Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="InfQua/Volver" to="." method="_on_volver_pressed"]
+
+[editable path="CraneoDemonio"]

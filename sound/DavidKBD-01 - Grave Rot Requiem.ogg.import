@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cy73oktnwdo5s"
+path="res://.godot/imported/DavidKBD-01 - Grave Rot Requiem.ogg-f98b51c567497d23b2e6c1129821f262.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/DavidKBD-01 - Grave Rot Requiem.ogg"
+dest_files=["res://.godot/imported/DavidKBD-01 - Grave Rot Requiem.ogg-f98b51c567497d23b2e6c1129821f262.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://t3eehxyefi4r" path="res://puntos.tscn" id="3_44uk3"]
 [ext_resource type="PackedScene" uid="uid://b5o71fmg4nihw" path="res://equipo_azul.tscn" id="3_qq4qk"]
 [ext_resource type="PackedScene" uid="uid://cpn0ti2yu8lvb" path="res://equipo_rojo.tscn" id="4_alpgy"]
-[ext_resource type="FontFile" uid="uid://lw8os4u28abm" path="res://Assets/Fonts/BoldPixels.ttf" id="5_alpgy"]
 [ext_resource type="PackedScene" uid="uid://drnq3s4mlqhjp" path="res://Scenes/eliminar_ficha.tscn" id="6_0yil4"]
+[ext_resource type="AudioStream" uid="uid://bsnqrrnt28ct1" path="res://sound/DavidKBD-02 - Blood Soaked Earth.ogg" id="7_awgsa"]
 [ext_resource type="PackedScene" uid="uid://djwqxei55n14d" path="res://Scenes/tablero_juego.tscn" id="7_seof4"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_seof4"]
@@ -14,6 +14,11 @@ viewport_path = NodePath("TableroJuego/SubViewport")
 [node name="MesaJuego" type="Node2D" unique_id=362145428]
 script = ExtResource("1_7vg10")
 
+[node name="soundtrack" type="AudioStreamPlayer2D" parent="." unique_id=631585611]
+stream = ExtResource("7_awgsa")
+autoplay = true
+parameters/looping = true
+
 [node name="Puntos" parent="." unique_id=764590296 instance=ExtResource("3_44uk3")]
 
 [node name="TextureRect" parent="Puntos" index="1" unique_id=16667269]
@@ -21,109 +26,73 @@ texture = SubResource("ViewportTexture_seof4")
 
 [node name="EquipoAzul" parent="." unique_id=2114332147 instance=ExtResource("3_qq4qk")]
 
-[node name="AzulButton1" parent="EquipoAzul/fichaAzulArea" parent_id_path=PackedInt32Array(2114332147, 1898192580) index="0" unique_id=50809359]
-metadata/_edit_use_anchors_ = true
-
 [node name="EquipoRojo" parent="." unique_id=630734687 instance=ExtResource("4_alpgy")]
-
-[node name="textTurno" type="Label" parent="." unique_id=171870360]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 484.0
-offset_top = 1.0
-offset_right = 556.0
-offset_bottom = 29.0
-grow_horizontal = 2
-size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("5_alpgy")
-theme_override_font_sizes/font_size = 32
-text = "AZUL"
-
-[node name="EliminarFicha" parent="." unique_id=253722770 instance=ExtResource("6_0yil4")]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-offset_left = 563.0
-offset_top = 468.0
-offset_right = 563.0
-offset_bottom = 468.0
-grow_vertical = 0
 
 [node name="TableroJuego" parent="." unique_id=41118037 instance=ExtResource("7_seof4")]
 
-[connection signal="area_entered" from="Puntos/punto" to="." method="_on_punto_area_entered"]
-[connection signal="area_exited" from="Puntos/punto" to="." method="_on_punto_area_exited"]
+[node name="textTurno" type="Label3D" parent="." unique_id=949163023]
+transform = Transform3D(-0.0067738206, -0.9861767, 0.16555934, -0.0025540292, 0.16557965, 0.98619336, -0.9999741, 0.0062573506, -0.0036403574, 4.7934737, -0.0024402142, -0.53017807)
+text = "Player"
+font_size = 350
+
+[node name="MenuPausa" parent="." unique_id=253722770 instance=ExtResource("6_0yil4")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 142.0
+offset_top = 55.0
+offset_right = 142.0
+offset_bottom = 55.0
+scale = Vector2(0.8, 0.8)
+
+[node name="HBoxContainer" parent="MenuPausa" index="0" unique_id=620384294]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 219.0
+offset_bottom = 155.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Button" type="Button" parent="." unique_id=865123694]
+offset_left = 15.0
+offset_top = 42.0
+offset_right = 94.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 38
+text = "Menu"
+
 [connection signal="pressed" from="Puntos/punto/punto1" to="." method="_on_punto_1_pressed"]
-[connection signal="area_entered" from="Puntos/punto2" to="." method="_on_punto_2_area_entered"]
-[connection signal="area_exited" from="Puntos/punto2" to="." method="_on_punto_2_area_exited"]
 [connection signal="pressed" from="Puntos/punto2/punto2" to="." method="_on_punto_2_pressed"]
-[connection signal="area_entered" from="Puntos/punto3" to="." method="_on_punto_3_area_entered"]
-[connection signal="area_exited" from="Puntos/punto3" to="." method="_on_punto_3_area_exited"]
 [connection signal="pressed" from="Puntos/punto3/punto3" to="." method="_on_punto_3_pressed"]
-[connection signal="area_entered" from="Puntos/punto4" to="." method="_on_punto_4_area_entered"]
-[connection signal="area_exited" from="Puntos/punto4" to="." method="_on_punto_4_area_exited"]
 [connection signal="pressed" from="Puntos/punto4/punto4" to="." method="_on_punto_4_pressed"]
-[connection signal="area_entered" from="Puntos/punto5" to="." method="_on_punto_5_area_entered"]
-[connection signal="area_exited" from="Puntos/punto5" to="." method="_on_punto_5_area_exited"]
 [connection signal="pressed" from="Puntos/punto5/punto5" to="." method="_on_punto_5_pressed"]
-[connection signal="area_entered" from="Puntos/punto6" to="." method="_on_punto_6_area_entered"]
-[connection signal="area_exited" from="Puntos/punto6" to="." method="_on_punto_6_area_exited"]
 [connection signal="pressed" from="Puntos/punto6/punto6" to="." method="_on_punto_6_pressed"]
-[connection signal="area_entered" from="Puntos/punto7" to="." method="_on_punto_7_area_entered"]
-[connection signal="area_exited" from="Puntos/punto7" to="." method="_on_punto_7_area_exited"]
 [connection signal="pressed" from="Puntos/punto7/punto7" to="." method="_on_punto_7_pressed"]
-[connection signal="area_entered" from="Puntos/punto8" to="." method="_on_punto_8_area_entered"]
-[connection signal="area_exited" from="Puntos/punto8" to="." method="_on_punto_8_area_exited"]
 [connection signal="pressed" from="Puntos/punto8/punto8" to="." method="_on_punto_8_pressed"]
-[connection signal="area_entered" from="Puntos/punto9" to="." method="_on_punto_9_area_entered"]
-[connection signal="area_exited" from="Puntos/punto9" to="." method="_on_punto_9_area_exited"]
 [connection signal="pressed" from="Puntos/punto9/punto9" to="." method="_on_punto_9_pressed"]
-[connection signal="area_entered" from="Puntos/punto10" to="." method="_on_punto_10_area_entered"]
-[connection signal="area_exited" from="Puntos/punto10" to="." method="_on_punto_10_area_exited"]
 [connection signal="pressed" from="Puntos/punto10/punto10" to="." method="_on_punto_10_pressed"]
-[connection signal="area_entered" from="Puntos/punto11" to="." method="_on_punto_11_area_entered"]
-[connection signal="area_exited" from="Puntos/punto11" to="." method="_on_punto_11_area_exited"]
 [connection signal="pressed" from="Puntos/punto11/punto11" to="." method="_on_punto_11_pressed"]
-[connection signal="area_entered" from="Puntos/punto12" to="." method="_on_punto_12_area_entered"]
-[connection signal="area_exited" from="Puntos/punto12" to="." method="_on_punto_12_area_exited"]
 [connection signal="pressed" from="Puntos/punto12/punto12" to="." method="_on_punto_12_pressed"]
-[connection signal="area_entered" from="Puntos/punto13" to="." method="_on_punto_13_area_entered"]
-[connection signal="area_exited" from="Puntos/punto13" to="." method="_on_punto_13_area_exited"]
 [connection signal="pressed" from="Puntos/punto13/punto13" to="." method="_on_punto_13_pressed"]
-[connection signal="area_entered" from="Puntos/punto14" to="." method="_on_punto_14_area_entered"]
-[connection signal="area_exited" from="Puntos/punto14" to="." method="_on_punto_14_area_exited"]
 [connection signal="pressed" from="Puntos/punto14/punto14" to="." method="_on_punto_14_pressed"]
-[connection signal="area_entered" from="Puntos/punto15" to="." method="_on_punto_15_area_entered"]
-[connection signal="area_exited" from="Puntos/punto15" to="." method="_on_punto_15_area_exited"]
 [connection signal="pressed" from="Puntos/punto15/punto15" to="." method="_on_punto_15_pressed"]
-[connection signal="area_entered" from="Puntos/punto16" to="." method="_on_punto_16_area_entered"]
-[connection signal="area_exited" from="Puntos/punto16" to="." method="_on_punto_16_area_exited"]
 [connection signal="pressed" from="Puntos/punto16/punto16" to="." method="_on_punto_16_pressed"]
-[connection signal="area_entered" from="Puntos/punto17" to="." method="_on_punto_17_area_entered"]
-[connection signal="area_exited" from="Puntos/punto17" to="." method="_on_punto_17_area_exited"]
 [connection signal="pressed" from="Puntos/punto17/punto17" to="." method="_on_punto_17_pressed"]
-[connection signal="area_entered" from="Puntos/punto18" to="." method="_on_punto_18_area_entered"]
-[connection signal="area_exited" from="Puntos/punto18" to="." method="_on_punto_18_area_exited"]
 [connection signal="pressed" from="Puntos/punto18/punto18" to="." method="_on_punto_18_pressed"]
-[connection signal="area_entered" from="Puntos/punto19" to="." method="_on_punto_19_area_entered"]
-[connection signal="area_exited" from="Puntos/punto19" to="." method="_on_punto_19_area_exited"]
 [connection signal="pressed" from="Puntos/punto19/punto19" to="." method="_on_punto_19_pressed"]
-[connection signal="area_entered" from="Puntos/punto20" to="." method="_on_punto_20_area_entered"]
-[connection signal="area_exited" from="Puntos/punto20" to="." method="_on_punto_20_area_exited"]
 [connection signal="pressed" from="Puntos/punto20/punto20" to="." method="_on_punto_20_pressed"]
-[connection signal="area_entered" from="Puntos/punto21" to="." method="_on_punto_21_area_entered"]
-[connection signal="area_exited" from="Puntos/punto21" to="." method="_on_punto_21_area_exited"]
 [connection signal="pressed" from="Puntos/punto21/punto21" to="." method="_on_punto_21_pressed"]
-[connection signal="area_entered" from="Puntos/punto22" to="." method="_on_punto_22_area_entered"]
-[connection signal="area_exited" from="Puntos/punto22" to="." method="_on_punto_22_area_exited"]
 [connection signal="pressed" from="Puntos/punto22/punto22" to="." method="_on_punto_22_pressed"]
-[connection signal="area_entered" from="Puntos/punto23" to="." method="_on_punto_23_area_entered"]
-[connection signal="area_exited" from="Puntos/punto23" to="." method="_on_punto_23_area_exited"]
 [connection signal="pressed" from="Puntos/punto23/punto23" to="." method="_on_punto_23_pressed"]
-[connection signal="area_entered" from="Puntos/punto24" to="." method="_on_punto_24_area_entered"]
-[connection signal="area_exited" from="Puntos/punto24" to="." method="_on_punto_24_area_exited"]
 [connection signal="pressed" from="Puntos/punto24/punto24" to="." method="_on_punto_24_pressed"]
 [connection signal="pressed" from="EquipoAzul/fichaAzulArea/AzulButton1" to="." method="_on_azul_button_1_pressed"]
 [connection signal="pressed" from="EquipoAzul/fichaAzulArea2/AzulButton2" to="." method="_on_azul_button_2_pressed"]
@@ -135,16 +104,15 @@ grow_vertical = 0
 [connection signal="pressed" from="EquipoRojo/fichaRojaArea3/RojoButton3" to="." method="_on_rojo_button_3_pressed"]
 [connection signal="pressed" from="EquipoRojo/fichaRojaArea4/RojoButton4" to="." method="_on_rojo_button_4_pressed"]
 [connection signal="pressed" from="EquipoRojo/fichaRojaArea5/RojoButton5" to="." method="_on_rojo_button_5_pressed"]
-[connection signal="pressed" from="EliminarFicha/HBoxContainer/Cancelar" to="." method="_on_cancelar_pressed"]
-[connection signal="pressed" from="EliminarFicha/HBoxContainer/Eliminar" to="." method="_on_eliminar_pressed"]
+[connection signal="pressed" from="MenuPausa/HBoxContainer/Cancelar" to="." method="_on_cancelar_pressed"]
+[connection signal="pressed" from="MenuPausa/HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 
 [editable path="Puntos"]
 [editable path="Puntos/TableroJuego"]
 [editable path="Puntos/TableroJuego/CraneoDemonio"]
-[editable path="Puntos/TableroJuego/BaseFicha"]
 [editable path="EquipoAzul"]
 [editable path="EquipoRojo"]
-[editable path="EliminarFicha"]
 [editable path="TableroJuego"]
 [editable path="TableroJuego/CraneoDemonio"]
-[editable path="TableroJuego/BaseFicha"]
+[editable path="MenuPausa"]

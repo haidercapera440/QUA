@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cddg7u1kj442q"
+path="res://.godot/imported/3_Pointer_B.wav-c1eac4ed9e94a15b55b0fc682d099292.sample"
+
+[deps]
+
+source_file="res://sound/Menu Sound Pack/Menu Sounds/3_Pointer_B.wav"
+dest_files=["res://.godot/imported/3_Pointer_B.wav-c1eac4ed9e94a15b55b0fc682d099292.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

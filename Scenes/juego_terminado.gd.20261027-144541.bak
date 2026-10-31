@@ -1,0 +1,31 @@
+extends Control
+
+@onready var ganador: Label = $Ganador
+@onready var titulo: Label = $Ganaste
+@onready var boton_volver: Button = $Button
+
+
+func _ready() -> void:
+	if Global.Empate:
+		titulo.text = "Empate"
+		ganador.text = ""
+	else:
+		ganador.text = str(Global.Ganador)
+		if Global.modo == Global.Modo.CONTRA_MAQUINA:
+			if str(Global.Ganador) == Global.NOMBRE_MAQUINA:
+				titulo.text = "Perdiste"
+			else:
+				titulo.text = "Ganaste"
+		elif Global.modo == Global.Modo.DEMO:
+			titulo.text = "Demo"
+		else:
+			titulo.text = "Ganó"
+	boton_volver.pressed.connect(_on_volver_pressed)
+
+
+func _on_volver_pressed() -> void:
+	Global.Ganador = ""
+	Global.Empate = false
+	Global.UbiPunto = null
+	Global.numpunto = null
+	get_tree().change_scene_to_file("res://Scenes/ui_inicio_juego.tscn")

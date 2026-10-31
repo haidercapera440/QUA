@@ -2,6 +2,26 @@
 
 [ext_resource type="Script" uid="uid://7vx1bjmejioq" path="res://Scenes/juego_terminado.gd" id="1_5ylas"]
 [ext_resource type="FontFile" uid="uid://lw8os4u28abm" path="res://Assets/Fonts/BoldPixels.ttf" id="1_f1oe6"]
+[ext_resource type="PackedScene" uid="uid://ce0fw05t51bi6" path="res://Assets/Modelo3D/CraneoDemonio/CraneoDemonio.blend" id="3_2w5fm"]
+[ext_resource type="AudioStream" uid="uid://dqybhwmg8oyvi" path="res://sound/DavidKBD-Mini Loop 13.ogg" id="4_gbld6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2w5fm"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_gbld6"]
+sky_material = SubResource("ProceduralSkyMaterial_2w5fm")
+
+[sub_resource type="Environment" id="Environment_d80v7"]
+background_mode = 2
+sky = SubResource("Sky_gbld6")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_gbld6"]
+viewport_path = NodePath("CraneoDemonio/SubViewport")
 
 [node name="JuegoTerminado" type="Control" unique_id=370430337]
 layout_mode = 3
@@ -11,6 +31,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5ylas")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=403905776]
+environment = SubResource("Environment_d80v7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1306430674]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_gbld6")
 
 [node name="Ganaste" type="Label" parent="." unique_id=1598310432]
 layout_mode = 1
@@ -29,7 +61,7 @@ theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_constants/shadow_offset_y = 98
 theme_override_fonts/font = ExtResource("1_f1oe6")
 theme_override_font_sizes/font_size = 240
-text = "Ganaste"
+text = "Victory"
 
 [node name="Ganador" type="Label" parent="." unique_id=1127759548]
 layout_mode = 1
@@ -48,6 +80,39 @@ theme_override_fonts/font = ExtResource("1_f1oe6")
 theme_override_font_sizes/font_size = 140
 text = "nombre"
 
+[node name="Estado" type="Label" parent="." unique_id=1359839097]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = 55.0
+offset_right = 320.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="Revancha" type="Button" parent="." unique_id=1399041742]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = 135.0
+offset_right = 130.0
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "rematch"
+
 [node name="Button" type="Button" parent="." unique_id=880521065]
 layout_mode = 1
 anchors_preset = 8
@@ -55,11 +120,42 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = 138.0
-offset_right = 25.0
-offset_bottom = 160.0
+offset_left = -90.0
+offset_top = 215.0
+offset_right = 90.0
+offset_bottom = 265.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 68
-text = "return"
+theme_override_font_sizes/font_size = 40
+text = "Return"
+
+[node name="CraneoDemonio" parent="." unique_id=829306404 instance=ExtResource("3_2w5fm")]
+
+[node name="Light" parent="CraneoDemonio" index="0" unique_id=1260733017]
+transform = Transform3D(-0.2908647, -0.77110094, 0.56639314, -0.05518904, 0.6045247, 0.79467237, -0.95517117, 0.19988346, -0.2183912, 11.310388, 0.09095001, -1.005454)
+
+[node name="Skeleton3D" parent="CraneoDemonio/Esqueleto" parent_id_path=PackedInt32Array(829306404, 1445600966) index="0" unique_id=1785502352]
+bones/1/rotation = Quaternion(-0.017731262, -0.04658184, -0.3581454, 0.93233454)
+bones/2/rotation = Quaternion(-0.2637466, -0.45967925, -0.35196584, 0.7715263)
+bones/3/rotation = Quaternion(-0.060888663, 2.9012991e-08, -0.10672912, 0.99242204)
+
+[node name="Hueso_001" parent="CraneoDemonio/Esqueleto/Skeleton3D" index="0" unique_id=1134019099]
+transform = Transform3D(0.73912406, 0.6694744, -0.074158974, -0.6661707, 0.74283487, 0.06642908, 0.09956045, 0.00030320135, 0.9950315, 0, 1.0000002, 0)
+
+[node name="Hueso_003" parent="CraneoDemonio/Esqueleto/Skeleton3D" index="1" unique_id=1667725006]
+transform = Transform3D(0.14889672, 0.8949718, -0.42054176, -0.41416287, 0.4426257, 0.79533124, 0.89794135, 0.055750556, 0.43656966, 0.7536305, 0.5881808, -0.08000053)
+
+[node name="AnimationPlayer" parent="CraneoDemonio" index="2" unique_id=1167883835]
+autoplay = &"Hablar_001"
+
+[node name="SubViewport" type="SubViewport" parent="CraneoDemonio" unique_id=2108051996]
+size = Vector2i(932, 512)
+
+[node name="Camera3D" type="Camera3D" parent="CraneoDemonio/SubViewport" unique_id=1429689578]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4, 0, 0)
+
+[node name="sountrack" type="AudioStreamPlayer2D" parent="." unique_id=1087087243]
+stream = ExtResource("4_gbld6")
+parameters/looping = true
+
+[editable path="CraneoDemonio"]

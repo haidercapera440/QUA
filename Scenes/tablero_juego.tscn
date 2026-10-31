@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://ce0fw05t51bi6" path="res://Assets/Modelo3D/CraneoDemonio/CraneoDemonio.blend" id="1_cty7i"]
 [ext_resource type="PackedScene" uid="uid://dw8xrqgygucyd" path="res://Assets/Modelo3D/CraneoDemonio/TableroQua.blend" id="2_1ao6j"]
-[ext_resource type="PackedScene" uid="uid://due7wi6b7fkfg" path="res://Scenes/materiales_juego/FichaAzul.tscn" id="3_cty7i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cty7i"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -27,11 +26,42 @@ environment = SubResource("Environment_of8vo")
 [node name="CraneoDemonio" parent="." unique_id=829306404 instance=ExtResource("1_cty7i")]
 transform = Transform3D(3.4607458, -2.0058014, 0, 2.0058014, 3.4607458, 0, 0, 0, 4, -8.662592, 1.0274305, -0.40325308)
 
-[node name="Craneo" parent="CraneoDemonio/Esqueleto/Skeleton3D/Hueso_001" parent_id_path=PackedInt32Array(829306404, 1134019099) index="0" unique_id=404916587]
+[node name="Skeleton3D" parent="CraneoDemonio/Esqueleto" parent_id_path=PackedInt32Array(829306404, 1445600966) index="0" unique_id=1785502352]
+bones/1/rotation = Quaternion(-0.017731262, -0.04658184, -0.3581454, 0.93233454)
+bones/2/rotation = Quaternion(-0.2637466, -0.45967925, -0.35196584, 0.7715263)
+bones/3/rotation = Quaternion(-0.060888663, 2.9012991e-08, -0.10672912, 0.99242204)
+
+[node name="Hueso_001" parent="CraneoDemonio/Esqueleto/Skeleton3D" index="0" unique_id=1134019099]
+transform = Transform3D(0.73912406, 0.6694744, -0.074158974, -0.6661707, 0.74283487, 0.06642908, 0.09956045, 0.00030320135, 0.9950315, 0, 1.0000002, 0)
+
+[node name="Craneo" parent="CraneoDemonio/Esqueleto/Skeleton3D/Hueso_001" index="0" unique_id=404916587]
 transform = Transform3D(0.19778588, -0.9751762, 0.099560454, 0.98003936, 0.19880319, 0.00030320385, -0.020088617, 0.09751321, 0.99503154, 0.41733134, 0.43440318, -0.041889533)
+
+[node name="Hueso_003" parent="CraneoDemonio/Esqueleto/Skeleton3D" index="1" unique_id=1667725006]
+transform = Transform3D(0.14889672, 0.8949718, -0.42054176, -0.41416287, 0.4426257, 0.79533124, 0.89794135, 0.055750556, 0.43656966, 0.7536305, 0.5881808, -0.08000053)
 
 [node name="AnimationPlayer" parent="CraneoDemonio" index="2" unique_id=1167883835]
 autoplay = &"Idle"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CraneoDemonio" unique_id=637864114]
+transform = Transform3D(0.24148144, 0, 0.06470476, -7.450581e-09, 0.24999999, -1.8626451e-09, -0.06470477, 0, 0.24148147, 1.9999996, 1.1920929e-07, 2.6016607)
+light_color = Color(0.3529412, 1, 1, 1)
+light_energy = 7.606
+light_indirect_energy = 6.845
+light_volumetric_fog_energy = 12.541
+light_specular = 0.0
+spot_range = 14.312789
+spot_angle = 30.372316
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="CraneoDemonio" unique_id=749131305]
+transform = Transform3D(0.22110409, -0.0014779121, 0.1166653, -0.012612738, -0.24881777, 0.020751663, 0.11599094, -0.024238989, -0.2201331, 2.5155938, 0.29357612, -3.1062393)
+light_color = Color(0.98747593, 0, 0.23859534, 1)
+light_energy = 7.606
+light_indirect_energy = 6.845
+light_volumetric_fog_energy = 12.541
+light_specular = 0.0
+spot_range = 18.823738
+spot_angle = 23.132946
 
 [node name="TableroQua" parent="." unique_id=1158037374 instance=ExtResource("2_1ao6j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3528347, 0, -0.011282921)
@@ -41,8 +71,5 @@ size = Vector2i(809, 408)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1850703031]
 transform = Transform3D(-3.2446582e-08, -0.67007685, 0.7422918, -2.9289973e-08, 0.7422918, 0.67007685, -1, -3.5527137e-15, -4.3711367e-08, 14.854349, 9.847082, -0.23206425)
-
-[node name="Node3D" parent="." unique_id=1832267702 instance=ExtResource("3_cty7i")]
-transform = Transform3D(0.008726192, 0, -0.49992386, 0, 0.5, 0, 0.49992386, 0, 0.008726192, 0.6490717, 1.423286, 8.8998995)
 
 [editable path="CraneoDemonio"]

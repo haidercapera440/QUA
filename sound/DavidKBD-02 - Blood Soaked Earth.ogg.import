@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bsnqrrnt28ct1"
+path="res://.godot/imported/DavidKBD-02 - Blood Soaked Earth.ogg-7134e21beae65ace4fdcd820770ce7f6.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/DavidKBD-02 - Blood Soaked Earth.ogg"
+dest_files=["res://.godot/imported/DavidKBD-02 - Blood Soaked Earth.ogg-7134e21beae65ace4fdcd820770ce7f6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

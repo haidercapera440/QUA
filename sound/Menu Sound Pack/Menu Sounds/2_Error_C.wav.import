@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dvvtxhj6j5v5s"
+path="res://.godot/imported/2_Error_C.wav-f3dc7ee16f5f9498dd3bd77c588daf08.sample"
+
+[deps]
+
+source_file="res://sound/Menu Sound Pack/Menu Sounds/2_Error_C.wav"
+dest_files=["res://.godot/imported/2_Error_C.wav-f3dc7ee16f5f9498dd3bd77c588daf08.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

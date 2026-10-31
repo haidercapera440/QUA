@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://crcrfao2jol8r"
+path="res://.godot/imported/GameStart2.wav-4ed34896f4789db579b60e56ebe7fac5.sample"
+
+[deps]
+
+source_file="res://sound/Menu Sound Pack/Menu Sounds/GameStart2.wav"
+dest_files=["res://.godot/imported/GameStart2.wav-4ed34896f4789db579b60e56ebe7fac5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

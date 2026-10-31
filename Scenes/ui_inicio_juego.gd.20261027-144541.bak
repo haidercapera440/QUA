@@ -1,0 +1,110 @@
+extends Control
+
+########### Script del Menu Principal ##############
+
+@onready var menu: Control = $Menu
+@onready var partida_ofline: Control = $partidaOfline
+@onready var p_1: LineEdit = $partidaOfline/VBoxContainer/P1
+@onready var p_2: LineEdit = $partidaOfline/VBoxContainer/P2
+@onready var inf_qua: Control = $InfQua
+@onready var contra_maquina: CheckButton = $partidaOfline/VBoxContainer/ContraMaquina
+@onready var bando: OptionButton = $partidaOfline/VBoxContainer/Bando
+@onready var aviso: Label = $partidaOfline/VBoxContainer/Aviso
+
+
+func _ready() -> void:
+	menu.visible = true
+	partida_ofline.visible = false
+	inf_qua.visible = false
+
+	# Estado limpio en cada vuelta al menú.
+	Global.modo = Global.Modo.DOS_JUGADORES
+	Global.bando_humano = 0
+	Global.dificultad = 1
+	Global.NameP1 = "player 1"
+	Global.NameP2 = "player 2"
+
+	bando.clear()
+	bando.add_item("Vos jugás como Azul")
+	bando.add_item("Vos jugás como Rojo")
+	bando.selected = 0
+
+	_aplicar_modo()
+
+
+func _aplicar_modo() -> void:
+	var vs_maquina := contra_maquina.button_pressed
+	bando.visible = vs_maquina
+	aviso.visible = vs_maquina
+	p_2.visible = not vs_maquina
+	p_1.placeholder_text = "Tu nombre" if vs_maquina else "P1 Enter your name"
+
+
+func _on_contra_maquina_toggled(_activado: bool) -> void:
+	_aplicar_modo()
+
+
+func _on_bando_item_selected(index: int) -> void:
+	Global.bando_humano = index
+
+
+func _on_play_ofline_pressed() -> void:
+	menu.visible = false
+	partida_ofline.visible = true
+	inf_qua.visible = false
+
+
+func _on_play_pressed() -> void:
+	var nombre := p_1.text.strip_edges()
+	if nombre == "":
+		nombre = "Jugador"
+
+	if contra_maquina.button_pressed:
+		Global.modo = Global.Modo.CONTRA_MAQUINA
+		Global.bando_humano = bando.selected
+		Global.dificultad = 1
+		if Global.bando_humano == 0:
+			Global.NameP1 = nombre
+			Global.NameP2 = Global.NOMBRE_MAQUINA
+		else:
+			Global.NameP1 = Global.NOMBRE_MAQUINA
+			Global.NameP2 = nombre
+	else:
+		Global.modo = Global.Modo.DOS_JUGADORES
+		var nombre2 := p_2.text.strip_edges()
+		Global.NameP1 = nombre
+		Global.NameP2 = nombre2 if nombre2 != "" else "Jugador 2"
+
+	get_tree().change_scene_to_file("res://MesaJuego.tscn")
+
+
+func _on_demo_pressed() -> void:
+	Global.modo = Global.Modo.DEMO
+	Global.dificultad = 1
+	Global.NameP1 = "Máquina Azul"
+	Global.NameP2 = "Máquina Roja"
+	get_tree().change_scene_to_file("res://MesaJuego.tscn")
+
+
+func _on_p_1_text_changed(new_text: String) -> void:
+	Global.NameP1 = new_text
+
+
+func _on_p_2_text_changed(new_text: String) -> void:
+	Global.NameP2 = new_text
+
+
+func _on_informacion_pressed() -> void:
+	menu.visible = false
+	partida_ofline.visible = false
+	inf_qua.visible = true
+
+
+func _on_volver_pressed() -> void:
+	menu.visible = true
+	inf_qua.visible = false
+	partida_ofline.visible = false
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()

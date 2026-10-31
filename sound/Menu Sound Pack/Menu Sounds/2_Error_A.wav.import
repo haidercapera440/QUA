@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfrmk5kl1c5tb"
+path="res://.godot/imported/2_Error_A.wav-8f47c204100d9034d170645b7bb3375e.sample"
+
+[deps]
+
+source_file="res://sound/Menu Sound Pack/Menu Sounds/2_Error_A.wav"
+dest_files=["res://.godot/imported/2_Error_A.wav-8f47c204100d9034d170645b7bb3375e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

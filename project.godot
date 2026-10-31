@@ -13,11 +13,17 @@ config_version=5
 config/name="Qua"
 run/main_scene="uid://c6sh21vvy3r0g"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://d3umcod82fj1j"
 
 [autoload]
 
 Global="*uid://cxk5jj2epjas3"
+Red="*res://red.gd"
+
+[display]
+
+window/size/mode=4
+window/stretch/mode="canvas_items"
 
 [global_group]
 

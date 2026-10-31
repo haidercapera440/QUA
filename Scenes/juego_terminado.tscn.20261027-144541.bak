@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://k2hm2omy57y1"]
+
+[ext_resource type="Script" uid="uid://7vx1bjmejioq" path="res://Scenes/juego_terminado.gd" id="1_5ylas"]
+[ext_resource type="FontFile" uid="uid://lw8os4u28abm" path="res://Assets/Fonts/BoldPixels.ttf" id="1_f1oe6"]
+
+[node name="JuegoTerminado" type="Control" unique_id=370430337]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ylas")
+
+[node name="Ganaste" type="Label" parent="." unique_id=1598310432]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -382.5
+offset_top = -221.0
+offset_right = 382.5
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_constants/shadow_offset_y = 98
+theme_override_fonts/font = ExtResource("1_f1oe6")
+theme_override_font_sizes/font_size = 240
+text = "Ganaste"
+
+[node name="Ganador" type="Label" parent="." unique_id=1127759548]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_f1oe6")
+theme_override_font_sizes/font_size = 140
+text = "nombre"
+
+[node name="Button" type="Button" parent="." unique_id=880521065]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = 138.0
+offset_right = 25.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 68
+text = "return"

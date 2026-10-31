@@ -21,7 +21,7 @@ offset_bottom = 648.0
 texture = SubResource("ViewportTexture_jky0q")
 
 [node name="punto" type="Area2D" parent="." unique_id=724158467]
-position = Vector2(348, 246.99998)
+position = Vector2(350, 226.99998)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto1" type="Button" parent="punto" unique_id=1291460337]
@@ -38,7 +38,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto2" type="Area2D" parent="." unique_id=2146397346]
-position = Vector2(556, 249.99998)
+position = Vector2(563, 226.99998)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto2" type="Button" parent="punto2" unique_id=2098765584]
@@ -55,7 +55,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto3" type="Area2D" parent="." unique_id=1586465222]
-position = Vector2(786, 245.99998)
+position = Vector2(799, 228.99998)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto3" type="Button" parent="punto3" unique_id=794042027]
@@ -72,7 +72,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto4" type="Area2D" parent="." unique_id=451539655]
-position = Vector2(385, 267)
+position = Vector2(383, 257)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto4" type="Button" parent="punto4" unique_id=351539078]
@@ -89,7 +89,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto5" type="Area2D" parent="." unique_id=882053307]
-position = Vector2(557, 276)
+position = Vector2(563, 258)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto5" type="Button" parent="punto5" unique_id=1990088826]
@@ -106,7 +106,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto6" type="Area2D" parent="." unique_id=690717934]
-position = Vector2(757, 267)
+position = Vector2(765, 256)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto6" type="Button" parent="punto6" unique_id=2068838145]
@@ -140,7 +140,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto8" type="Area2D" parent="." unique_id=961675704]
-position = Vector2(560, 299)
+position = Vector2(561, 289)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto8" type="Button" parent="punto8" unique_id=2002632265]
@@ -157,7 +157,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto9" type="Area2D" parent="." unique_id=277182506]
-position = Vector2(719, 288)
+position = Vector2(728, 287)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto9" type="Button" parent="punto9" unique_id=1556135672]
@@ -174,7 +174,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto10" type="Area2D" parent="." unique_id=173052709]
-position = Vector2(347, 423)
+position = Vector2(384, 451)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto10" type="Button" parent="punto10" unique_id=875167202]
@@ -191,7 +191,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto11" type="Area2D" parent="." unique_id=420185904]
-position = Vector2(554, 424)
+position = Vector2(560, 452)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto11" type="Button" parent="punto11" unique_id=96545580]
@@ -208,7 +208,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto12" type="Area2D" parent="." unique_id=1810101801]
-position = Vector2(799, 422)
+position = Vector2(775, 448)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto12" type="Button" parent="punto12" unique_id=2023968568]
@@ -225,7 +225,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto13" type="Area2D" parent="." unique_id=1089483100]
-position = Vector2(226, 480)
+position = Vector2(280, 512)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto13" type="Button" parent="punto13" unique_id=1057082832]
@@ -242,7 +242,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto14" type="Area2D" parent="." unique_id=1081887544]
-position = Vector2(551, 488)
+position = Vector2(558, 514)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto14" type="Button" parent="punto14" unique_id=726727815]
@@ -259,7 +259,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto15" type="Area2D" parent="." unique_id=1246002100]
-position = Vector2(917, 474)
+position = Vector2(880, 509)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto15" type="Button" parent="punto15" unique_id=1797584643]
@@ -276,7 +276,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto16" type="Area2D" parent="." unique_id=1846594680]
-position = Vector2(93.00001, 540)
+position = Vector2(189, 572)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto16" type="Button" parent="punto16" unique_id=67557452]
@@ -293,7 +293,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto17" type="Area2D" parent="." unique_id=1407143211]
-position = Vector2(553, 546)
+position = Vector2(564, 576)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto17" type="Button" parent="punto17" unique_id=541205113]
@@ -310,7 +310,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto18" type="Area2D" parent="." unique_id=110769896]
-position = Vector2(1045, 535)
+position = Vector2(972, 574)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto18" type="Button" parent="punto18" unique_id=1081782665]
@@ -327,7 +327,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto19" type="Area2D" parent="." unique_id=1041278980]
-position = Vector2(259, 344)
+position = Vector2(280, 366)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto19" type="Button" parent="punto19" unique_id=325143609]
@@ -344,7 +344,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto20" type="Area2D" parent="." unique_id=568922718]
-position = Vector2(317, 344)
+position = Vector2(340, 361)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto20" type="Button" parent="punto20" unique_id=1949652745]
@@ -361,7 +361,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto21" type="Area2D" parent="." unique_id=1138610384]
-position = Vector2(382, 353)
+position = Vector2(399, 364)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto21" type="Button" parent="punto21" unique_id=1206396876]
@@ -378,7 +378,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto22" type="Area2D" parent="." unique_id=647564550]
-position = Vector2(758, 344)
+position = Vector2(754, 358)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto22" type="Button" parent="punto22" unique_id=1485267699]
@@ -395,7 +395,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto23" type="Area2D" parent="." unique_id=315340840]
-position = Vector2(824, 342)
+position = Vector2(817, 362)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto23" type="Button" parent="punto23" unique_id=232586720]
@@ -412,7 +412,7 @@ shape = SubResource("RectangleShape2D_7vg10")
 debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [node name="punto24" type="Area2D" parent="." unique_id=853632867]
-position = Vector2(885, 338)
+position = Vector2(868, 365)
 scale = Vector2(0.2, 0.2)
 
 [node name="punto24" type="Button" parent="punto24" unique_id=1433197561]
@@ -430,4 +430,3 @@ debug_color = Color(0.72425777, 0.8804811, 1, 0.41960785)
 
 [editable path="TableroJuego"]
 [editable path="TableroJuego/CraneoDemonio"]
-[editable path="TableroJuego/BaseFicha"]

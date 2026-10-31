@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfsaprghwdjpo"
+path="res://.godot/imported/DavidKBD-Mini Loop 16.ogg-b449305df4a9c2fbb7cd5141dadc7bfb.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/DavidKBD-Mini Loop 16.ogg"
+dest_files=["res://.godot/imported/DavidKBD-Mini Loop 16.ogg-b449305df4a9c2fbb7cd5141dadc7bfb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
