@@ -41,6 +41,33 @@
 
 ---
 
-## 🛠️ Instalación y Ejecución
+## 💻 Requisitos e Instalación (Windows)
+
+Actualmente, **Qua** está disponible únicamente para **Windows**. No requiere instalación; es una versión portable lista para jugar.
+
+### Pasos para jugar:
+1. Ve a la sección de [**ITCHIO**](https://capera.itch.io/qua) descarga el archivo comprimido más reciente (`Qua_Windows.zip`).
+2. **Descomprime el archivo** en una carpeta de tu preferencia (clic derecho -> *Extraer todo...*). ⚠️ *Importante: No ejecutes el juego directamente desde adentro del archivo .zip o podría presentar errores.*
+3. Abre la carpeta extraída y haz doble clic en `Qua.exe` para iniciar el juego.
+
+---
+
+## 🌐 Configuración para Multijugador (LAN / Red Local)
+
+Para jugar partidas multijugador en red local (LAN), el juego necesita comunicarse a través de tu red con el otro equipo:
+
+1. Al iniciar el modo multijugador por primera vez, aparecerá una ventana emergente del **Firewall de Windows Defender**.
+2. Asegúrate de marcar las casillas de **Redes privadas** y **Redes públicas**.
+3. Haz clic en **Permitir acceso**. 
+
+> **Nota:** Si no aceptas este permiso o cierras la ventana por error, el Firewall bloqueará la conexión y los jugadores no podrán verse ni unirse a la partida en la red local.
+
+---
+
+## 🛠️ Para Desarrolladores (Código Fuente)
+
+Si deseas explorar el código, modificar el juego o compilarlo para otros sistemas operativos:
 
 1. Clona este repositorio:
+   ```bash
+   git clone [https://github.com/tu-usuario/qua.git](https://github.com/tu-usuario/qua.git)
