@@ -70,4 +70,4 @@ Si deseas explorar el código, modificar el juego o compilarlo para otros sistem
 
 1. Clona este repositorio:
    ```bash
-   git clone [https://github.com/tu-usuario/qua.git](https://github.com/tu-usuario/qua.git)
+   git clone https://github.com/haidercapera440/QUA.git
